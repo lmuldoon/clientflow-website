@@ -1,0 +1,474 @@
+<?php
+
+/**
+ * Homepage — ClientFlow
+ */
+
+global $meta;
+
+$meta->title = 'ClientFlow — The Client OS for WordPress Freelancers';
+$meta->description = 'Proposals, payments, and a white-labelled client portal — all inside the WordPress site you already own. One-time payment. No monthly fees.';
+$meta->slug = 'home';
+
+get_header();
+
+?>
+
+<article>
+
+	<!-- ═══════════════════════════════════════════════════════════════════════════
+     HERO — Apple variant
+════════════════════════════════════════════════════════════════════════════════ -->
+
+	<section class="hero">
+		<div class="container">
+			<div class="hero__inner">
+
+				<h1>The all-in-one <br>client workflow system for WordPress</h1>
+
+				<p class="hero__lede">Create proposals, get paid, and manage your clients in one simple system &mdash; all inside the WordPress site you already own.</p>
+
+				<div class="hero__actions">
+					<a class="button button--primary" href="#">Get ClientFlow free</a>
+					<a class="button button--ghost" href="#how-it-works">See how it works</a>
+				</div>
+
+			</div>
+			<div class="browser-frame">
+				<!-- <div class="browser-frame__bar">
+					<span class="browser-dot"></span>
+					<span class="browser-dot"></span>
+					<span class="browser-dot"></span>
+					<span class="browser-frame__url">wpclientflow.co.uk/wp-admin/admin.php?page=clientflow</span>
+				</div> -->
+				<div class="browser-frame__content">
+					<img src="/static/images/screenshots/admin-plan-and-usage.jpg?v=1" alt="WP Mailblox editor" width="1920" height="1080" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ═══════════════════════════════════════════════════════════════════════════
+     REPLACES — Before vs After
+════════════════════════════════════════════════════════════════════════════════ -->
+
+	<section class="section section--replaces bg-white">
+		<div class="container animated-up">
+
+			<p class="section-eyebrow">Replace the stack</p>
+			<h2 class="section-heading">Running client work shouldn't require five different tools</h2>
+			<p class="section-lede">Most freelancers juggle proposals, invoices, email threads, Google Drive, and project trackers just to deliver one project.</p>
+			<p class="section-lede">ClientFlow brings the entire client lifecycle into WordPress — from proposal to payment to delivery.</p>
+			<div class="card-grid">
+
+				<div class="card card--before">
+					<span class="card__title">Before ClientFlow</span>
+					<ul class="card-list">
+						<li><span>PDF's proposals</span></li>
+						<li><span>Payment links</span></li>
+						<li><span>Endless email threads</span></li>
+						<li><span>"Did you receive the invoice?"</span></li>
+						<li><span>Scattered client files</span></li>
+					</ul>
+				</div>
+
+				<div class="card card--after">
+					<span class="card__title card__title--after">After ClientFlow</span>
+					<ul class="card-list">
+						<li><span>One proposal flow</span></li>
+						<li><span>Instant payments</span></li>
+						<li><span>Client portal</span></li>
+						<li><span>Project tracking</span></li>
+						<li><span>Automatic notifications</span></li>
+						<li><span>Approvals + delivery</span></li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+
+
+	<!-- ═══════════════════════════════════════════════════════════════════════════
+     PIPELINE — Interactive stepper
+════════════════════════════════════════════════════════════════════════════════ -->
+
+	<section class="section section--pipeline menu-section bg-lightemerald" id="how-it-works">
+		<div class="container animated-up">
+
+			<p class="section-eyebrow">How it works</p>
+			<h2 class="section-heading">One workflow from proposal to delivery</h2>
+			<p class="section-lede">From the first proposal to the final payment, ClientFlow keeps your entire client workflow connected inside WordPress.</p>
+
+			<div class="pipeline-stepper">
+
+				<div class="pipeline-track">
+					<button class="pipeline-step" data-stage="0" type="button">
+						<span class="pipeline-step__dot">01</span>
+						<span class="pipeline-step__label">Proposal</span>
+					</button>
+					<button class="pipeline-step" data-stage="1" type="button">
+						<span class="pipeline-step__dot">02</span>
+						<span class="pipeline-step__label">Payments</span>
+					</button>
+					<button class="pipeline-step" data-stage="2" type="button">
+						<span class="pipeline-step__dot">03</span>
+						<span class="pipeline-step__label">Projects</span>
+					</button>
+					<button class="pipeline-step" data-stage="3" type="button">
+						<span class="pipeline-step__dot">04</span>
+						<span class="pipeline-step__label">Delivery</span>
+					</button>
+					<!-- <button class="pipeline-step" data-stage="5" type="button">
+						<span class="pipeline-step__dot">05</span>
+						<span class="pipeline-step__label">Retention</span>
+					</button> -->
+				</div>
+
+				<div class="pipeline-panel is-active">
+
+					<div class="pipeline-panel__content">
+						<h3 class="pipeline-panel__headline" id="js-pipeline-headline">Proposals that close themselves</h3>
+						<p class="pipeline-panel__desc">
+							Create professional proposals in minutes, send them with one click, and let clients review and accept instantly — no PDFs, no back-and-forth.
+						</p>
+						<ul class="features__list">
+							<li>Pre-built templates</li>
+							<li>Guided 5-step proposal builder</li>
+							<li>Secure client approval links</li>
+							<li>AI-assisted proposal writing</li>
+						</ul>
+					</div>
+
+					<div class="pipeline-screenshot" id="js-pipeline-screenshot" aria-hidden="true">
+						<img src="/static/images/screenshots/proposal-template-wizard.jpg?v=1" alt="ClientFlow proposal builder" width="1675" height="1712" />
+					</div>
+
+				</div>
+
+				<div class="pipeline-panel">
+
+					<div class="pipeline-panel__content">
+						<h3 class="pipeline-panel__headline" id="js-pipeline-headline">Get paid without friction</h3>
+						<p class="pipeline-panel__desc">
+							Turn accepted proposals into payments instantly with built-in Stripe integration, including deposits and remaining balances — all tracked automatically.
+						</p>
+						<ul class="features__list">
+							<li>Accept deposits and final payments</li>
+							<li>One-click "accept & pay" flow</li>
+							<li>Payment status tracking</li>
+							<li>Automatic email notifications</li>
+						</ul>
+					</div>
+
+					<div class="pipeline-screenshot" id="js-pipeline-screenshot" aria-hidden="true">
+						<img src="/static/images/screenshots/admin-payment-notification.png?v=1" alt="ClientFlow payment notification email" width="1140" height="1092" />
+					</div>
+
+				</div>
+
+				<div class="pipeline-panel">
+
+					<div class="pipeline-panel__content">
+						<h3 class="pipeline-panel__headline" id="js-pipeline-headline">Keep every project organised</h3>
+						<p class="pipeline-panel__desc">
+							As soon as a proposal is accepted, a project is created automatically — keeping all client activity, messages, and progress organised in one place.
+						</p>
+						<ul class="features__list">
+							<li>Automatic project creation</li>
+							<li>Project status tracking</li>
+							<li>Client messaging</li>
+							<li>Activity timeline</li>
+						</ul>
+					</div>
+
+					<div class="pipeline-screenshot" id="js-pipeline-screenshot" aria-hidden="true">
+						<img src="/static/images/screenshots/admin-project-2.jpg?v=1" alt="ClientFlow admin project interface" width="1920" height="1441" />
+					</div>
+
+				</div>
+
+				<div class="pipeline-panel">
+
+					<div class="pipeline-panel__content">
+						<h3 class="pipeline-panel__headline" id="js-pipeline-headline">Deliver work in one place</h3>
+						<p class="pipeline-panel__desc">
+							Collaborate with clients through a dedicated portal where you can share files, request approvals, and keep everything aligned until the work is complete.
+						</p>
+						<ul class="features__list">
+							<li>Dedicated client portal</li>
+							<li>File uploads and sharing</li>
+							<li>Approval requests</li>
+							<li>Final payment requests</li>
+						</ul>
+					</div>
+
+					<div class="pipeline-screenshot" id="js-pipeline-screenshot" aria-hidden="true">
+						<img src="/static/images/screenshots/client-dashboard.jpg?v=1" alt="ClientFlow client dashboard" width="1920" height="1434ç" />
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+		<div class="container animated-up pt-12 md:pt-20 lg:pt-24">
+			<p class="section-eyebrow">Beyond the workflow</p>
+			<h2 class="section-heading">See everything ClientFlow can do</h2>
+			<p class="section-lede mb-10">
+				Explore proposals, projects, client portals, analytics, notifications, integrations, and automation tools built to streamline your entire client process.
+			</p>
+			<a class="button button--primary" href="/how-it-works">
+				View Full Platform
+			</a>
+		</div>
+	</section>
+
+	<!-- ═══════════════════════════════════════════════════════════════════════════
+     FEATURES GRID — 6 cells, 3 × 2
+════════════════════════════════════════════════════════════════════════════════ -->
+
+	<section class="section section--features menu-section" id="features">
+		<div class="container animated-up">
+
+			<div class="features-heading-block">
+				<p class="section-eyebrow">Why ClientFlow</p>
+				<h2 class="section-heading">Run your entire client workflow from one place</h2>
+			</div>
+
+			<div class="cf-features-grid">
+
+				<div class="feature-cell">
+					<span class="feature-cell__label">01</span>
+					<h3>From proposal to payment</h3>
+					<p>Create proposals, collect deposits, request final balances, and track payments without switching between multiple tools.</p>
+				</div>
+
+				<div class="feature-cell">
+					<span class="feature-cell__label">02</span>
+					<h3>A professional client experience</h3>
+					<p>Give clients a branded portal where they can review proposals, pay invoices, approve work, download files, and track progress.</p>
+				</div>
+
+				<div class="feature-cell">
+					<span class="feature-cell__label">03</span>
+					<h3>Built for freelancers & agencies</h3>
+					<p>Designed specifically for client-based businesses managing proposals, projects, payments, and ongoing communication.</p>
+				</div>
+
+				<div class="feature-cell">
+					<span class="feature-cell__label">04</span>
+					<h3>Everything stays inside WordPress</h3>
+					<p>Your proposals, projects, files, and client data stay on infrastructure you already own and control.</p>
+				</div>
+
+				<div class="feature-cell">
+					<span class="feature-cell__label">05</span>
+					<h3>Automate repetitive admin work</h3>
+					<p>Trigger emails, payment requests, project creation, and external workflows automatically with built-in automation and webhooks.</p>
+				</div>
+
+				<div class="feature-cell">
+					<span class="feature-cell__label">06</span>
+					<h3>AI-assisted proposal writing</h3>
+					<p>Generate proposal sections, improve wording, and create persuasive client-ready copy in seconds using built-in AI tools.</p>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+
+	<!-- ═══════════════════════════════════════════════════════════════════════════
+     PRICING — 3 tiers
+════════════════════════════════════════════════════════════════════════════════ -->
+
+	<section class="section section--pricing menu-section bg-stone" id="pricing">
+		<div class="container animated-up">
+
+			<p class="section-eyebrow">Pricing</p>
+			<h2 class="section-heading">Simple pricing that scales with your business</h2>
+			<p class="section-lede">Whether you're sending your first proposal or managing multiple client projects, ClientFlow grows with your workflow.</p>
+
+			<div class="cf-pricing-grid">
+
+				<!-- FREE -->
+				<div class="cf-pricing-tier">
+					<span class="cf-pricing-tier__name">Free</span>
+					<div class="cf-pricing-tier__month-price"><span><sup>&dollar;</sup>0</span></div>
+					<p class="cf-pricing-tier__note">Forever free</p>
+					<hr class="cf-pricing-divider">
+					<ul class="cf-pricing-features">
+						<li><span class="cf-check">&#10003;</span> 3 proposals per month</li>
+						<li><span class="cf-check">&#10003;</span> Proposal builder</li>
+						<li><span class="cf-check">&#10003;</span> 1 team seat</li>
+					</ul>
+					<a class="button button--ghost" style="width:100%; justify-content:center;" href="#">Download free</a>
+				</div>
+
+				<!-- PRO -->
+				<div class="cf-pricing-tier cf-pricing-tier--featured">
+					<span class="cf-pricing-tier__pill">Most popular</span>
+					<span class="cf-pricing-tier__name">Pro</span>
+					<div class="cf-pricing-tier__month-price"><span><sup>&dollar;</sup>9.99</span><span class="cf-pricing-tier__period">/ month</span></div>
+					<div class="cf-pricing-tier__year-price"><span><sup>&dollar;</sup>89</span><span class="cf-pricing-tier__period">/ year</span></div>
+					<hr class="cf-pricing-divider">
+					<ul class="cf-pricing-features">
+						<li><span class="cf-check">&#10003;</span> Unlimited proposals</li>
+						<li><span class="cf-check">&#10003;</span> 1 team seat</li>
+						<li><span class="cf-check">&#10003;</span> Proposal builder</li>
+						<li><span class="cf-check">&#10003;</span> Client portal</li>
+						<li><span class="cf-check">&#10003;</span> Stripe payments</li>
+						<li><span class="cf-check">&#10003;</span> Analytics</li>
+						<li><span class="cf-check">&#10003;</span> 100 AI requests/month</li>
+						<li><span class="cf-check">&#10003;</span> Email support</li>
+					</ul>
+					<a class="button button--primary js-get-pro" style="width:100%; justify-content:center;" href="#">Get Pro</a>
+				</div>
+
+				<!-- AGENCY -->
+				<div class="cf-pricing-tier">
+					<span class="cf-pricing-tier__name">Agency</span>
+					<div class="cf-pricing-tier__month-price"><span><sup>&dollar;</sup>24.99</span><span class="cf-pricing-tier__period">/ month</span></div>
+					<div class="cf-pricing-tier__year-price"><span><sup>&dollar;</sup>229</span><span class="cf-pricing-tier__period">/ year</span></div>
+					<hr class="cf-pricing-divider">
+					<ul class="cf-pricing-features">
+						<li><span class="cf-check">&#10003;</span> Unlimited proposals</li>
+						<li><span class="cf-check">&#10003;</span> 5 team seats</li>
+						<li><span class="cf-check">&#10003;</span> Proposal builder</li>
+						<li><span class="cf-check">&#10003;</span> Client portal</li>
+						<li><span class="cf-check">&#10003;</span> Stripe payments</li>
+						<li><span class="cf-check">&#10003;</span> Analytics</li>
+						<li><span class="cf-check">&#10003;</span> Project management</li>
+						<li><span class="cf-check">&#10003;</span> Messaging</li>
+						<li><span class="cf-check">&#10003;</span> File uploads</li>
+						<li><span class="cf-check">&#10003;</span> 500 AI requests/month</li>
+						<li><span class="cf-check">&#10003;</span> Priority email support</li>
+					</ul>
+					<a class="button button--ghost" style="width:100%; justify-content:center;" href="#">Get Agency</a>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+
+	<!-- ═══════════════════════════════════════════════════════════════════════════
+     FAQ — Accordion
+════════════════════════════════════════════════════════════════════════════════ -->
+
+	<section class="section section--faq menu-section" id="faq">
+		<div class="container animated-up">
+
+			<p class="section-eyebrow">FAQ</p>
+			<h2 class="section-heading">Common questions</h2>
+
+			<div class="faq-layout">
+			<div class="accordions-wrapper">
+
+				<div class="accordion">
+					<div class="js-accordion-trigger">
+						<h3>Do I need WordPress to use ClientFlow?</h3>
+					</div>
+					<div class="accordion-content">
+						<p>Yes. ClientFlow is a self-hosted WordPress plugin that runs directly inside your existing WordPress website. There’s no separate SaaS dashboard, external platform, or additional software to manage.</p>
+					</div>
+				</div>
+
+				<div class="accordion">
+					<div class="js-accordion-trigger">
+						<h3>Who is ClientFlow built for?</h3>
+					</div>
+					<div class="accordion-content">
+						<p>ClientFlow is designed for freelancers, studios, and agencies who manage client work and want a more organised workflow for proposals, payments, projects, and client communication — without stitching together multiple tools.</p>
+					</div>
+				</div>
+
+				<div class="accordion">
+					<div class="js-accordion-trigger">
+						<h3>Can clients view proposals without logging in?</h3>
+					</div>
+					<div class="accordion-content">
+						<p>Yes. Proposals are shared using secure private links, allowing clients to review, accept, request changes, and pay directly from their browser without needing a WordPress account.</p>
+					</div>
+				</div>
+
+				<div class="accordion">
+					<div class="js-accordion-trigger">
+						<h3>How do payments work?</h3>
+					</div>
+					<div class="accordion-content">
+						<p>ClientFlow integrates with Stripe so clients can pay deposits or full balances directly from proposals and project portals. Payment statuses, receipts, and activity are tracked automatically inside WordPress.</p>
+					</div>
+				</div>
+
+				<div class="accordion">
+					<div class="js-accordion-trigger">
+						<h3>Does ClientFlow replace my existing tools?</h3>
+					</div>
+					<div class="accordion-content">
+						<p>That’s the goal. ClientFlow combines proposals, payments, project management, client portals, messaging, approvals, analytics, and automation into one connected workflow — reducing the need for multiple disconnected platforms.</p>
+					</div>
+				</div>
+
+				<div class="accordion">
+					<div class="js-accordion-trigger">
+						<h3>Where is my data stored?</h3>
+					</div>
+					<div class="accordion-content">
+						<p>Your proposals, projects, files, client records, and activity data stay inside your own WordPress installation and hosting environment. You remain in control of your data at all times.</p>
+					</div>
+				</div>
+
+				<div class="accordion">
+					<div class="js-accordion-trigger">
+						<h3>Can I customise the client experience?</h3>
+					</div>
+					<div class="accordion-content">
+						<p>Yes. ClientFlow is designed to feel like part of your own business, with branded proposals, client portals, emails, colours, and logos that match your website and workflow.</p>
+					</div>
+				</div>
+
+				<div class="accordion">
+					<div class="js-accordion-trigger">
+						<h3>Is there a free version?</h3>
+					</div>
+					<div class="accordion-content">
+						<p>Yes. The free plan includes the core proposal workflow so you can try ClientFlow before upgrading to Pro or Agency for payments, portals, projects, AI tools, collaboration, and advanced workflow features.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</section>
+
+
+	<!-- ═══════════════════════════════════════════════════════════════════════════
+     CTA STRIP
+════════════════════════════════════════════════════════════════════════════════ -->
+
+	<section class="section section--cta-strip bg-lightindigo">
+		<div class="container animated-up">
+
+			<h2>Stop running your business<br>across seven different tools</h2>
+			<p>Get ClientFlow free and see how much simpler it can be to run client work from inside WordPress.</p>
+
+			<div class="cta-strip__actions">
+				<a class="button button--primary js-get-pro" href="#">Get ClientFlow free</a>
+				<a class="button button--ghost" href="#pricing">See pricing</a>
+			</div>
+
+		</div>
+	</section>
+
+
+</article>
+
+<?php get_footer(); ?>
