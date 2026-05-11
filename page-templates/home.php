@@ -327,7 +327,7 @@ get_header();
 						<li><span class="cf-check">&#10003;</span> 100 AI requests/month</li>
 						<li><span class="cf-check">&#10003;</span> Email support</li>
 					</ul>
-					<a class="button button--primary js-get-pro" style="width:100%; justify-content:center;" href="#">Get Pro</a>
+					<a class="button button--primary plan-button" data-plan-id="48155" style="width:100%; justify-content:center;" href="#">Get Pro</a>
 				</div>
 
 				<!-- AGENCY -->
@@ -349,7 +349,7 @@ get_header();
 						<li><span class="cf-check">&#10003;</span> 500 AI requests/month</li>
 						<li><span class="cf-check">&#10003;</span> Priority email support</li>
 					</ul>
-					<a class="button button--ghost" style="width:100%; justify-content:center;" href="#">Get Agency</a>
+					<a class="button button--ghost plan-button" data-plan-id="48156" style="width:100%; justify-content:center;" href="#">Get Agency</a>
 				</div>
 
 			</div>
@@ -461,7 +461,7 @@ get_header();
 			<p>Get ClientFlow free and see how much simpler it can be to run client work from inside WordPress.</p>
 
 			<div class="cta-strip__actions">
-				<a class="button button--primary js-get-pro" href="#">Get ClientFlow free</a>
+				<a class="button button--primary plan-button" href="#">Get ClientFlow free</a>
 				<a class="button button--ghost" href="#pricing">See pricing</a>
 			</div>
 

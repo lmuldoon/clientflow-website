@@ -113,7 +113,7 @@ $is_single_page = strpos($meta->slug, 'news/') === 0;
 							<li><a class="site-menu__link<?php echo $meta->slug === 'whats-next' ? ' is-active' : ''; ?>" href="/whats-next">What's next</a></li>
 							<li><a class="site-menu__link<?php echo $meta->slug === 'docs' ? ' is-active' : ''; ?>" href="/docs">Docs</a></li>
 							<li><a class="site-menu__link<?php echo $meta->slug === 'changelog' ? ' is-active' : ''; ?>" href="/changelog">Changelog</a></li>
-							<li><a class="button button--nav js-get-pro" href="#">Get Pro</a></li>
+							<li><a class="button button--nav plan-button" data-plan-id="48155" href="#">Get Pro</a></li>
 						</ul>
 					</nav>
 
