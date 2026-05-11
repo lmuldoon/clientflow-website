@@ -57,11 +57,11 @@ global $meta;
 
 	<!-- Start Favicons -->
 	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="ClientFlow" />
-<link rel="manifest" href="/site.webmanifest" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="ClientFlow" />
+	<link rel="manifest" href="/site.webmanifest" />
 	<!-- End Favicons -->
 
 	<link rel="stylesheet" type="text/css" href="/<?php echo get_revision('screen.css'); ?>">
@@ -70,7 +70,7 @@ global $meta;
 	<script type="text/javascript" src="/<?php echo get_revision('header.js'); ?>"></script>
 	<?php if ($IS_LIVE) { ?>
 		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTDHMMKFTJ"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRGF49K5LV"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
 
@@ -79,7 +79,7 @@ global $meta;
 			}
 			gtag('js', new Date());
 
-			gtag('config', 'G-TTDHMMKFTJ');
+			gtag('config', 'G-GRGF49K5LV');
 		</script>
 	<?php } ?>
 </head>
@@ -90,7 +90,8 @@ $is_single_page = strpos($meta->slug, 'news/') === 0;
 <body class="page page-<?php echo $meta->slug; ?> <?php echo $is_single_page ? 'page-news-single' : ''; ?>" id="top">
 	<a href="#maincontent" class="skip-link">Skip to main content</a>
 
-	<?php // Load all SVG icons as hidden spritesheet ?>
+	<?php // Load all SVG icons as hidden spritesheet 
+	?>
 	<div hidden>
 		<?php include_asset('static/icons.svg'); ?>
 	</div>
