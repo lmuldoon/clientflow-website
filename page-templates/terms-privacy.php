@@ -28,7 +28,7 @@ get_header();
 		<div class="container animated-up">
 			<div class="text-container content">
 
-				<h2>Terms of Use</h2>
+				<h2 class="mt-0">Terms of Use</h2>
 
 				<h3>Use of the plugin</h3>
 				<p>ClientFlow is a WordPress plugin distributed under the <a href="https://www.gnu.org/licenses/gpl-2.0.html" target="_blank" rel="noopener">GNU General Public License v2.0 or later (GPL-2.0+)</a>. You are free to use, modify and distribute the plugin subject to the terms of that licence.</p>

@@ -42,7 +42,7 @@ get_header();
 					<span class="browser-frame__url">wpclientflow.co.uk/wp-admin/admin.php?page=clientflow</span>
 				</div> -->
 				<div class="browser-frame__content">
-					<img src="/static/images/screenshots/admin-plan-and-usage.jpg?v=1" alt="WP Mailblox editor" width="1920" height="1080" />
+					<img src="/static/images/screenshots/admin-plan-and-usage.jpg?v=1" alt="ClientFlow admin dashboard" width="1920" height="1180" />
 				</div>
 			</div>
 		</div>
@@ -306,6 +306,9 @@ get_header();
 						<li><span class="cf-check">&#10003;</span> 3 proposals per month</li>
 						<li><span class="cf-check">&#10003;</span> Proposal builder</li>
 						<li><span class="cf-check">&#10003;</span> 1 team seat</li>
+						<li><span class="cf-check">&#10003;</span> Track viewed, accepted, and declined proposals</li>
+						<li><span class="cf-check">&#10003;</span> Collect client feedback and revisions</li>
+						<li><span class="cf-check">&#10003;</span> Automated status notification emails</li>
 					</ul>
 					<a class="button button--ghost" style="width:100%; justify-content:center;" href="#">Download free</a>
 				</div>
@@ -319,11 +322,15 @@ get_header();
 					<hr class="cf-pricing-divider">
 					<ul class="cf-pricing-features">
 						<li><span class="cf-check">&#10003;</span> Unlimited proposals</li>
-						<li><span class="cf-check">&#10003;</span> 1 team seat</li>
 						<li><span class="cf-check">&#10003;</span> Proposal builder</li>
+						<li><span class="cf-check">&#10003;</span> 1 team seat</li>
+						<li><span class="cf-check">&#10003;</span> Track viewed, accepted, and declined proposals</li>
+						<li><span class="cf-check">&#10003;</span> Collect client feedback and revisions</li>
+						<li><span class="cf-check">&#10003;</span> Automated status notification emails</li>
 						<li><span class="cf-check">&#10003;</span> Client portal</li>
 						<li><span class="cf-check">&#10003;</span> Stripe payments</li>
 						<li><span class="cf-check">&#10003;</span> Analytics</li>
+						<li><span class="cf-check">&#10003;</span> Automated testimonial request</li>
 						<li><span class="cf-check">&#10003;</span> 100 AI requests/month</li>
 						<li><span class="cf-check">&#10003;</span> Email support</li>
 					</ul>
@@ -338,16 +345,21 @@ get_header();
 					<hr class="cf-pricing-divider">
 					<ul class="cf-pricing-features">
 						<li><span class="cf-check">&#10003;</span> Unlimited proposals</li>
-						<li><span class="cf-check">&#10003;</span> 5 team seats</li>
 						<li><span class="cf-check">&#10003;</span> Proposal builder</li>
+						<li><span class="cf-check">&#10003;</span> 5 team seats</li>
+						<li><span class="cf-check">&#10003;</span> Track viewed, accepted, and declined proposals</li>
+						<li><span class="cf-check">&#10003;</span> Collect client feedback and revisions</li>
+						<li><span class="cf-check">&#10003;</span> Automated status notification emails</li>
 						<li><span class="cf-check">&#10003;</span> Client portal</li>
 						<li><span class="cf-check">&#10003;</span> Stripe payments</li>
 						<li><span class="cf-check">&#10003;</span> Analytics</li>
-						<li><span class="cf-check">&#10003;</span> Project management</li>
-						<li><span class="cf-check">&#10003;</span> Messaging</li>
-						<li><span class="cf-check">&#10003;</span> File uploads</li>
+						<li><span class="cf-check">&#10003;</span> Automated testimonial request</li>
 						<li><span class="cf-check">&#10003;</span> 500 AI requests/month</li>
 						<li><span class="cf-check">&#10003;</span> Priority email support</li>
+						<li><span class="cf-check">&#10003;</span> Project & milestone management</li>
+						<li><span class="cf-check">&#10003;</span> Approval workflows</li>
+						<li><span class="cf-check">&#10003;</span> Client messaging</li>
+						<li><span class="cf-check">&#10003;</span> File uploads</li>
 					</ul>
 					<a class="button button--ghost plan-button" data-plan-id="48156" style="width:100%; justify-content:center;" href="#">Get Agency</a>
 				</div>

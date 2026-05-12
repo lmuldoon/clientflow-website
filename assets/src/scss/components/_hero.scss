@@ -86,12 +86,15 @@
 .browser-frame {
 	background: var(--color-white);
 	border: 1.5px solid var(--color-grey);
-	border-radius: 18px 18px 0 0;
+	border-radius: 8px 8px 0 0;
 	overflow: hidden;
 	box-shadow:
 		0 24px 80px rgba(15, 23, 42, 0.12),
 		0 4px 16px rgba(15, 23, 42, 0.06);
 	margin-inline: auto;
+	@screen md {
+		border-radius: 12px 12px 0 0;
+	}
 }
 
 .browser-frame__bar {
@@ -128,8 +131,8 @@
 
 .hero {
 	.browser-frame__content {
-		aspect-ratio: 16 / 9;
-		min-height: 280px;
+		//aspect-ratio: 16 / 9;
+		// min-height: 280px;
 		background:
 			repeating-linear-gradient(-55deg,
 				rgba(99, 102, 241, 0.03) 0,
