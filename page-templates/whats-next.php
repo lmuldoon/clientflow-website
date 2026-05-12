@@ -6,7 +6,7 @@
 
 global $meta;
 
-$meta->title = 'ClientFlow — The Client OS for WordPress Freelancers';
+$meta->title = 'What\'s Next - ClientFlow';
 $meta->description = 'Explore what’s next for ClientFlow — upcoming features, improvements, and roadmap updates as we continue building the client workflow platform for WordPress.';
 $meta->slug = 'whats-next';
 
