@@ -7,7 +7,7 @@
 global $meta;
 
 $meta->title = 'Docs — ClientFlow';
-$meta->description = 'Learn how to install, configure, and use ClientFlow to manage proposals, payments, and client portals from WordPress.';
+$meta->description = 'Documentation for ClientFlow — guides, setup instructions, and feature references to help you install, configure, and use the plugin in WordPress.';
 $meta->slug = 'docs';
 get_header();
 

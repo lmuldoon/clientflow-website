@@ -7,8 +7,7 @@
 global $meta;
 
 $meta->title = 'Changelog — ClientFlow';
-$meta->description = 'Version history and release notes for ClientFlow. See what\'s new, what\'s changed and what\'s been fixed.';
-$meta->slug = 'changelog';
+$meta->description = 'ClientFlow changelog — track new features, improvements, and bug fixes across all releases of the WordPress plugin.';$meta->slug = 'changelog';
 
 get_header();
 

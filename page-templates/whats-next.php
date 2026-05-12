@@ -7,7 +7,7 @@
 global $meta;
 
 $meta->title = 'ClientFlow — The Client OS for WordPress Freelancers';
-$meta->description = 'Proposals, payments, and a white-labelled client portal — all inside the WordPress site you already own. One-time payment. No monthly fees.';
+$meta->description = 'Explore what’s next for ClientFlow — upcoming features, improvements, and roadmap updates as we continue building the client workflow platform for WordPress.';
 $meta->slug = 'whats-next';
 
 get_header();
