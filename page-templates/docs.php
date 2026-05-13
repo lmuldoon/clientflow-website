@@ -52,7 +52,7 @@ get_header();
 
 			<section class="docs-section stack" id="getting-started">
 				<h2>Getting Started</h2>
-				<p>ClientFlow is a WordPress plugin that turns your WordPress admin into a complete client management system. It covers the full client lifecycle: proposals, e-signatures, payments, a client portal, project milestones, file delivery, approvals, and team messaging — all without leaving WordPress.</p>
+				<p>ClientFlow is a WordPress plugin that turns your WordPress admin into a complete client management system. It covers the full client lifecycle: proposals, payments, a client portal, project milestones, file delivery, approvals, and team messaging — all without leaving WordPress.</p>
 				<p>Three plans are available. The <strong>Free</strong> plan covers proposals and the client database. <strong>Pro</strong> adds Stripe payments, the client portal, AI writing tools, webhooks, and analytics. <strong>Agency</strong> adds projects, milestones, messaging, file storage, approval workflows, and up to five team seats.</p>
 			</section>
 
@@ -432,12 +432,6 @@ get_header();
 						</tr>
 						<tr>
 							<td>Proposal templates</td>
-							<td>&#10003;</td>
-							<td>&#10003;</td>
-							<td>&#10003;</td>
-						</tr>
-						<tr>
-							<td>E-signature</td>
 							<td>&#10003;</td>
 							<td>&#10003;</td>
 							<td>&#10003;</td>
