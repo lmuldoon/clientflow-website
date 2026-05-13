@@ -15,7 +15,7 @@
 	color: var(--color-white);
 	line-height: 1.2;
 	text-decoration: none;
-	text-align: center;
+	text-align: center !important;
 	border: 1.5px solid transparent;
 	cursor: pointer;
 	transition: background-color 0.2s ease;
