@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Documentation page — ClientFlow skeleton
+ * Documentation page — ClientFlow
  */
 
 global $meta;
@@ -30,15 +30,17 @@ get_header();
 		<nav class="docs-sidebar animated-up" aria-label="Documentation navigation">
 			<ul class="docs-nav">
 				<li><a href="#getting-started" class="docs-nav__link is-active">Getting Started</a></li>
+				<li><a href="#requirements" class="docs-nav__link">Requirements</a></li>
 				<li><a href="#installation" class="docs-nav__link">Installation</a></li>
 				<li><a href="#quick-start" class="docs-nav__link">Quick Start</a></li>
-				<li class="docs-nav__coming-soon"><span>Proposals</span><span class="badge badge--soon">Coming soon</span></li>
-				<li class="docs-nav__coming-soon"><span>Payments &amp; Stripe</span><span class="badge badge--soon">Coming soon</span></li>
-				<li class="docs-nav__coming-soon"><span>Client Portal</span><span class="badge badge--soon">Coming soon</span></li>
-				<li class="docs-nav__coming-soon"><span>White Labelling</span><span class="badge badge--soon">Coming soon</span></li>
-				<li class="docs-nav__coming-soon"><span>Team Seats</span><span class="badge badge--soon">Coming soon</span></li>
-				<li class="docs-nav__coming-soon"><span>AI Features</span><span class="badge badge--soon">Coming soon</span></li>
-				<li class="docs-nav__coming-soon"><span>Migration Guides</span><span class="badge badge--soon">Coming soon</span></li>
+				<li><a href="#proposals" class="docs-nav__link">Proposals</a></li>
+				<li><a href="#client-portal" class="docs-nav__link">Client Portal</a></li>
+				<li><a href="#payments" class="docs-nav__link">Payments &amp; Stripe</a></li>
+				<li><a href="#projects" class="docs-nav__link">Projects &amp; Milestones</a></li>
+				<li><a href="#team" class="docs-nav__link">Team Management</a></li>
+				<li><a href="#webhooks" class="docs-nav__link">Webhooks</a></li>
+				<li><a href="#ai" class="docs-nav__link">AI Features</a></li>
+				<li><a href="#settings" class="docs-nav__link">Settings</a></li>
 				<li><a href="#free-vs-pro" class="docs-nav__link">Free vs Pro</a></li>
 			</ul>
 		</nav>
@@ -46,57 +48,366 @@ get_header();
 		<!-- Main Content -->
 		<div class="docs-content animated-up">
 
+			<!-- ─── GETTING STARTED ─────────────────────────────────────────── -->
+
 			<section class="docs-section stack" id="getting-started">
 				<h2>Getting Started</h2>
-				<p>ClientFlow is a WordPress plugin that turns your WordPress admin into a full client operating system. It covers the complete client lifecycle: proposals, payments, file delivery, approvals, and recurring retainers — all without leaving WordPress.</p>
-				<p>This documentation will walk you through installation, initial setup, and the key features. Extended guides for proposals, payments, portal customisation, and team management are being written and will appear here shortly.</p>
+				<p>ClientFlow is a WordPress plugin that turns your WordPress admin into a complete client management system. It covers the full client lifecycle: proposals, e-signatures, payments, a client portal, project milestones, file delivery, approvals, and team messaging — all without leaving WordPress.</p>
+				<p>Three plans are available. The <strong>Free</strong> plan covers proposals and the client database. <strong>Pro</strong> adds Stripe payments, the client portal, AI writing tools, webhooks, and analytics. <strong>Agency</strong> adds projects, milestones, messaging, file storage, approval workflows, and up to five team seats.</p>
 			</section>
 
-			<section class="docs-section stack" id="installation">
-				<h2>Installation</h2>
+			<!-- ─── REQUIREMENTS ────────────────────────────────────────────── -->
 
-				<h3>Requirements</h3>
+			<section class="docs-section stack" id="requirements">
+				<h2>Requirements</h2>
 				<ul>
 					<li>WordPress 6.0 or later</li>
 					<li>PHP 8.0 or later</li>
-					<li>A Stripe account (for Pro/Agency payment features)</li>
+					<li>A Stripe account (Pro and Agency only — required for payment collection)</li>
 				</ul>
+				<p>ClientFlow is single-site only. Multisite networks are not supported.</p>
+			</section>
+
+			<!-- ─── INSTALLATION ────────────────────────────────────────────── -->
+
+			<section class="docs-section stack" id="installation">
+				<h2>Installation</h2>
 
 				<h3>From WordPress.org (Free)</h3>
 				<ol>
 					<li>In your WordPress admin, go to <strong>Plugins &rarr; Add New</strong>.</li>
 					<li>Search for <strong>ClientFlow</strong>.</li>
-					<li>Click <strong>Install Now</strong> then <strong>Activate</strong>.</li>
+					<li>Click <strong>Install Now</strong>, then <strong>Activate</strong>.</li>
 				</ol>
 
 				<h3>From a ZIP file (Pro / Agency)</h3>
 				<ol>
 					<li>Download the plugin ZIP from your Freemius licence dashboard.</li>
 					<li>In your WordPress admin, go to <strong>Plugins &rarr; Add New &rarr; Upload Plugin</strong>.</li>
-					<li>Choose the ZIP file and click <strong>Install Now</strong>, then <strong>Activate</strong>.</li>
-					<li>You will be prompted to enter your licence key on first activation.</li>
+					<li>Select the ZIP file and click <strong>Install Now</strong>, then <strong>Activate</strong>.</li>
+					<li>On first activation you will be prompted to enter your licence key. Paste the key from your licence dashboard and click <strong>Activate Licence</strong>.</li>
 				</ol>
+
+				<p>On activation, ClientFlow creates its database tables, registers the client portal rewrite rules, and schedules a monthly usage-reset cron event. If the client portal URLs return 404 after activation, go to <strong>Settings &rarr; Permalinks</strong> and click <strong>Save Changes</strong> to flush the rewrite rules.</p>
 			</section>
+
+			<!-- ─── QUICK START ─────────────────────────────────────────────── -->
 
 			<section class="docs-section stack" id="quick-start">
 				<h2>Quick Start</h2>
-				<p>Once the plugin is active, a <strong>ClientFlow</strong> menu item will appear in your WordPress admin sidebar.</p>
+				<p>After activation a <strong>ClientFlow</strong> entry appears in your WordPress admin sidebar. The first time you open it, the setup wizard guides you through the essential steps. You can revisit any of these from <strong>ClientFlow &rarr; Settings</strong> later.</p>
 
-				<h3>Step 1 — Add your first client</h3>
-				<p>Go to <strong>ClientFlow &rarr; Clients &rarr; Add New</strong>. Fill in the client&rsquo;s name, email, and any other details. This record will be reused across all proposals, portals, and invoices for that client.</p>
+				<h3>Step 1 — Add your branding</h3>
+				<p>Go to <strong>ClientFlow &rarr; Settings</strong>. Enter your business name, sender email, brand colour, and logo URL. These are applied to all outgoing emails and the client portal.</p>
 
-				<h3>Step 2 — Create a proposal</h3>
-				<p>Go to <strong>ClientFlow &rarr; Proposals &rarr; New Proposal</strong>. Select your client, add proposal sections from the library, set line-item pricing, and add an e-signature block. When you&rsquo;re happy, click <strong>Send to Client</strong>.</p>
+				<h3>Step 2 — Connect Stripe (Pro / Agency)</h3>
+				<p>Go to <strong>ClientFlow &rarr; Settings</strong> and enter your Stripe publishable key, secret key, and webhook signing secret before sending any proposals, so payment collection is ready from the start. See the <a href="#payments">Payments &amp; Stripe</a> section for the full setup steps.</p>
 
-				<h3>Step 3 — Connect Stripe (Pro/Agency)</h3>
-				<p>Go to <strong>ClientFlow &rarr; Settings &rarr; Payments</strong> and click <strong>Connect with Stripe</strong>. Follow the Stripe onboarding flow. Once connected, payments will be automatically collected when a client signs a proposal (if you have included a payment block).</p>
-
-				<h3>Step 4 — Set up your client portal (Pro/Agency)</h3>
-				<p>Go to <strong>ClientFlow &rarr; Settings &rarr; Portal</strong>. Upload your logo, choose your brand colours, and set the subdomain where clients will log in (e.g. <code>clients.yourstudio.com</code>). Point the subdomain to your WordPress site using a CNAME record in your domain DNS settings.</p>
+				<h3>Step 3 — Create and send a proposal</h3>
+				<p>Go to <strong>ClientFlow &rarr; Proposals &rarr; New Proposal</strong>. In the proposal builder, fill in the client&rsquo;s details (name, email, company, phone) — this automatically creates their client record. Build your proposal from the template library, set pricing, and optionally enable payment collection. When ready, click <strong>Send to Client</strong>. The client receives a magic-link email — no account required to view or accept.</p>
 			</section>
 
+			<!-- ─── PROPOSALS ───────────────────────────────────────────────── -->
+
+			<section class="docs-section stack" id="proposals">
+				<h2>Proposals</h2>
+				<p>Proposals are the core workflow in ClientFlow. Each proposal has a unique shareable link that clients open without needing a WordPress account.</p>
+
+				<h3>Lifecycle</h3>
+				<p>A proposal moves through the following statuses:</p>
+				<ol>
+					<li><strong>Draft</strong> — Created but not yet sent. You can edit all content freely.</li>
+					<li><strong>Sent</strong> — Delivered to the client by email. The client sees Accept, Decline, and Request Revision actions.</li>
+					<li><strong>Viewed</strong> — The client has opened the link. Recorded automatically.</li>
+					<li><strong>Accepted</strong> — Client approved the proposal. On Agency, a project is automatically created. On Pro/Agency, the client receives a portal invite.</li>
+					<li><strong>Declined</strong> — Client rejected the proposal. An optional decline reason is stored.</li>
+					<li><strong>Revision Requested</strong> — Client asked for changes. Their note is stored and visible in the admin.</li>
+					<li><strong>Completed</strong> — Work finished and any payment collected. On Agency, the associated project is locked.</li>
+					<li><strong>Expired</strong> — The proposal link is no longer valid (if an expiry date was set).</li>
+				</ol>
+
+				<h3>Editing proposal content</h3>
+				<p>After creating a proposal, the proposal detail screen shows a summary of the settings (client, pricing, payment options). To write or edit the actual proposal content — sections, text, and line items — click the <strong>Edit Content</strong> button. This opens the full proposal editor where you can build out your proposal before sending it to the client.</p>
+
+				<h3>Templates</h3>
+				<p>The template library provides preset proposal layouts. Start from a template and customise content, line items, and pricing per client. Templates are filtered by your current plan.</p>
+
+				<h3>Payment collection</h3>
+				<p>Enable payment on any proposal (Pro/Agency). Set a deposit percentage (1–100%) if you want to collect a partial amount at acceptance and the balance on completion, or collect the full amount upfront. Stripe handles all PCI compliance.</p>
+
+				<h3>AI writing assist (Pro / Agency)</h3>
+				<p>While editing a proposal, highlight any text and use the AI toolbar to <strong>Improve</strong>, <strong>Shorten</strong>, make it more <strong>Persuasive</strong>, or <strong>Generate</strong> content from a brief. See the <a href="#ai">AI Features</a> section for quota details.</p>
+
+				<h3>Limits</h3>
+				<p>Free accounts can create <strong>3 proposals per calendar month</strong>. Pro and Agency have no monthly limit. The counter resets on the 1st of each month.</p>
+			</section>
+
+			<!-- ─── CLIENT PORTAL ───────────────────────────────────────────── -->
+
+			<section class="docs-section stack" id="client-portal">
+				<h2>Client Portal</h2>
+				<p>The client portal is a set of pages hosted on your WordPress site where clients can review proposals, track payments, and (on Agency) interact with their projects. It is available on Pro and Agency plans.</p>
+
+				<h3>How clients log in</h3>
+				<p>ClientFlow uses <strong>magic links</strong>. When a proposal is accepted, the client receives an email with a one-time login link. Clicking it authenticates them and redirects to the portal dashboard. Links are single-use and expire after 24 hours. Clients can optionally set a password for future logins.</p>
+				<p>The portal login page lives at <code>/clientflow/login</code> on your site. No custom domain or subdomain is required — it runs on the same domain as your WordPress install.</p>
+
+				<h3>Portal pages</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>URL</th>
+							<th>What the client sees</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>/clientflow/dashboard</code></td>
+							<td>Overview of their account</td>
+						</tr>
+						<tr>
+							<td><code>/clientflow/proposals</code></td>
+							<td>List of their proposals — view, accept, decline, or request revision</td>
+						</tr>
+						<tr>
+							<td><code>/clientflow/payments</code></td>
+							<td>Payment history and receipts</td>
+						</tr>
+						<tr>
+							<td><code>/clientflow/projects</code></td>
+							<td>Active projects, milestones, files, and messaging (Agency only)</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3>Basic vs Full portal</h3>
+				<p><strong>Pro (Basic)</strong> — Clients can view proposals, accept or decline, and see payment history. No project access.</p>
+				<p><strong>Agency (Full)</strong> — Clients also see project milestones, can approve deliverables, download files, and message the agency directly from the portal.</p>
+
+				<h3>Permalinks</h3>
+				<p>If portal URLs return 404, go to <strong>Settings &rarr; Permalinks</strong> and click <strong>Save Changes</strong> to regenerate the rewrite rules.</p>
+			</section>
+
+			<!-- ─── PAYMENTS ────────────────────────────────────────────────── -->
+
+			<section class="docs-section stack" id="payments">
+				<h2>Payments &amp; Stripe</h2>
+				<p>Payment collection requires a Stripe account and is available on Pro and Agency plans.</p>
+
+				<h3>Connecting Stripe</h3>
+				<ol>
+					<li>Log in to your <a href="https://dashboard.stripe.com/apikeys" rel="noopener noreferrer" target="_blank">Stripe dashboard</a> and copy your <strong>Publishable key</strong> and <strong>Secret key</strong>.</li>
+					<li>In your WordPress admin, go to <strong>ClientFlow &rarr; Settings</strong>.</li>
+					<li>Paste both keys into the Stripe API Keys fields and save. The status badge will show <strong>Live</strong> or <strong>Test</strong> depending on which key prefix you entered.</li>
+				</ol>
+
+				<h3>Setting up the webhook</h3>
+				<p>ClientFlow needs Stripe to notify it when a payment completes. To configure this:</p>
+				<ol>
+					<li>In your Stripe dashboard, go to <strong>Developers &rarr; Webhooks &rarr; Add endpoint</strong>.</li>
+					<li>Copy the <strong>Webhook Endpoint URL</strong> from <strong>ClientFlow &rarr; Settings</strong> (it looks like <code>https://yoursite.com/wp-json/clientflow/v1/payments/webhook</code>).</li>
+					<li>Paste it into Stripe and select the <code>checkout.session.completed</code> event.</li>
+					<li>After saving, copy the <strong>Signing secret</strong> (<code>whsec_&hellip;</code>) from Stripe and paste it into the Stripe Webhook Signing Secret field in ClientFlow Settings.</li>
+				</ol>
+
+				<h3>Deposit payments</h3>
+				<p>On any proposal, enable payment and set a <strong>deposit percentage</strong> (1–100%). The client pays the deposit when they accept. You can mark the balance as due on project completion, which triggers a second Stripe checkout session.</p>
+
+				<h3>Currencies</h3>
+				<p>GBP is the default. Any currency supported by your Stripe account can be used — set the currency on each proposal individually.</p>
+
+				<h3>Refunds</h3>
+				<p>Refunds can be initiated from <strong>ClientFlow &rarr; Proposals</strong> on any completed payment. This calls the Stripe API directly — no manual action in the Stripe dashboard is needed.</p>
+			</section>
+
+			<!-- ─── PROJECTS ────────────────────────────────────────────────── -->
+
+			<section class="docs-section stack" id="projects">
+				<h2>Projects &amp; Milestones</h2>
+				<p>Projects are available on the <strong>Agency plan</strong> only. When a client accepts a proposal, a project is automatically created and linked to that proposal and client.</p>
+
+				<h3>Project statuses</h3>
+				<ul>
+					<li><strong>Active</strong> — Work is in progress.</li>
+					<li><strong>On Hold</strong> — Paused. Can be reactivated.</li>
+					<li><strong>Completed</strong> — Finished. The project is locked for editing.</li>
+				</ul>
+
+				<h3>Milestones</h3>
+				<p>Break a project into milestones under <strong>ClientFlow &rarr; Projects &rarr; [project name]</strong>. Each milestone has a title, description, due date, and status (<strong>Pending</strong>, <strong>In Progress</strong>, <strong>Submitted</strong>, or <strong>Completed</strong>). Milestones can be reordered by dragging.</p>
+
+				<h3>Approvals</h3>
+				<p>Create approval requests against any project for designs, content, deliverables, or other items. The client sees the request in the portal and can approve or reject it with a comment. Statuses: <strong>Pending</strong>, <strong>Approved</strong>, <strong>Rejected</strong>.</p>
+
+				<h3>File uploads</h3>
+				<p>Upload files to any project from <strong>ClientFlow &rarr; Projects</strong>. Clients can download them from the portal. Each Agency account has a <strong>1 GB total storage limit</strong> across all projects. Files are stored securely and served via authenticated URLs.</p>
+
+				<h3>Messaging</h3>
+				<p>Each project has a message thread visible to both the agency team and the client. Clients send messages from the portal; the agency replies from the WordPress admin. Unread message counts appear as a badge on the <strong>Projects</strong> menu item. Messages are marked read when either party opens the thread.</p>
+			</section>
+
+			<!-- ─── TEAM ─────────────────────────────────────────────────────── -->
+
+			<section class="docs-section stack" id="team">
+				<h2>Team Management</h2>
+				<p>Team seats are available on the <strong>Agency plan</strong>. Agency accounts support up to <strong>5 users</strong> (the account owner plus 4 invited members).</p>
+
+				<h3>Inviting a team member</h3>
+				<ol>
+					<li>Go to <strong>ClientFlow &rarr; Team &rarr; Invite Member</strong>.</li>
+					<li>Enter the member&rsquo;s email address and assign a role.</li>
+					<li>The invitee receives an email with a link to accept and set up their WordPress account. They are created with the <code>clientflow_member</code> role.</li>
+				</ol>
+
+				<h3>Roles</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Role</th>
+							<th>What they can do</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><strong>Admin</strong></td>
+							<td>Full access to all ClientFlow features and settings</td>
+						</tr>
+						<tr>
+							<td><strong>Editor</strong></td>
+							<td>Create and edit proposals, clients, and projects — cannot access Settings or Team</td>
+						</tr>
+						<tr>
+							<td><strong>Viewer</strong></td>
+							<td>Read-only access to proposals, clients, projects, and analytics</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p>All data created by a team member is owned by and counted against the account owner. Usage quotas (AI, storage, proposals) are shared across the team.</p>
+			</section>
+
+			<!-- ─── WEBHOOKS ────────────────────────────────────────────────── -->
+
+			<section class="docs-section stack" id="webhooks">
+				<h2>Webhooks</h2>
+				<p>Webhooks are available on <strong>Pro and Agency</strong>. They allow ClientFlow to notify external services (Zapier, Make, custom endpoints) when events occur.</p>
+
+				<h3>Registering a webhook</h3>
+				<ol>
+					<li>Go to <strong>ClientFlow &rarr; Webhooks &rarr; Add Webhook</strong>.</li>
+					<li>Enter the endpoint URL and select which events should trigger it.</li>
+					<li>Copy the generated <strong>signing secret</strong> — you&rsquo;ll use this to verify payloads on your endpoint.</li>
+					<li>Use the <strong>Test</strong> button to send a sample payload and confirm delivery.</li>
+				</ol>
+
+				<h3>Available events</h3>
+				<ul>
+					<li><code>proposal.sent</code></li>
+					<li><code>proposal.accepted</code></li>
+					<li><code>proposal.declined</code></li>
+					<li><code>proposal.revision_requested</code></li>
+					<li><code>payment.completed</code></li>
+					<li><code>project.created</code></li>
+					<li><code>project.completed</code></li>
+				</ul>
+
+				<h3>Verifying payloads</h3>
+				<p>Every request includes an <code>X-ClientFlow-Signature</code> header containing an HMAC-SHA256 signature of the raw request body, signed with your webhook secret. Verify this on your endpoint before processing the payload. The last 3 delivery attempts for each webhook are logged and visible in the admin.</p>
+			</section>
+
+			<!-- ─── AI ───────────────────────────────────────────────────────── -->
+
+			<section class="docs-section stack" id="ai">
+				<h2>AI Features</h2>
+				<p>AI writing assistance is available on <strong>Pro and Agency</strong> plans. It works inside the proposal editor.</p>
+
+				<h3>How to use it</h3>
+				<p>Select any text in the proposal editor and choose an action from the AI toolbar:</p>
+				<ul>
+					<li><strong>Improve</strong> — Rewrite the selection to be clearer and more professional.</li>
+					<li><strong>Shorten</strong> — Condense the selection without losing meaning.</li>
+					<li><strong>Persuasive</strong> — Rewrite the selection to be more compelling.</li>
+					<li><strong>Generate</strong> — Produce new content from a brief you enter.</li>
+				</ul>
+
+				<h3>Quotas and limits</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Plan</th>
+							<th>AI requests per month</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Free</td>
+							<td>Not available</td>
+						</tr>
+						<tr>
+							<td>Pro</td>
+							<td>100</td>
+						</tr>
+						<tr>
+							<td>Agency</td>
+							<td>500</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>A 3-second cooldown applies between requests. Quotas reset on the 1st of each month. Shared across your team on Agency.</p>
+
+				<h3>How it works</h3>
+				<p>AI requests are processed through a ClientFlow relay server. Your WordPress site never calls the AI provider directly. This keeps your credentials private and allows ClientFlow to track costs and enforce plan quotas server-side.</p>
+			</section>
+
+			<!-- ─── SETTINGS ────────────────────────────────────────────────── -->
+
+			<section class="docs-section stack" id="settings">
+				<h2>Settings</h2>
+				<p>All settings are under <strong>ClientFlow &rarr; Settings</strong>. This page requires the WordPress <code>manage_options</code> capability (site administrators only).</p>
+
+				<h3>Branding (all plans)</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Field</th>
+							<th>Used in</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Business Name</td>
+							<td>Emails, portal header</td>
+						</tr>
+						<tr>
+							<td>Sender Name</td>
+							<td>The "From" name on all outgoing emails</td>
+						</tr>
+						<tr>
+							<td>Sender Email</td>
+							<td>The "From" address on all outgoing emails</td>
+						</tr>
+						<tr>
+							<td>Brand Colour</td>
+							<td>Proposal CTA buttons, portal accent colour</td>
+						</tr>
+						<tr>
+							<td>Logo URL</td>
+							<td>Emails, portal header — recommended max 180&times;48&nbsp;px</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3>Stripe API Keys (Pro / Agency)</h3>
+				<p>Enter your Stripe <strong>Publishable Key</strong> (<code>pk_live_&hellip;</code> or <code>pk_test_&hellip;</code>) and <strong>Secret Key</strong> (<code>sk_live_&hellip;</code> or <code>sk_test_&hellip;</code>). A status badge shows whether ClientFlow is in Live or Test mode. See <a href="#payments">Payments &amp; Stripe</a> for webhook setup.</p>
+
+				<h3>Testimonial Emails (Pro / Agency)</h3>
+				<p>Enable automated review-request emails sent to clients after their final payment is collected. Configure the email body, the URL you want them to visit (e.g. a Google Reviews or Trustpilot page), and the button label (default: &ldquo;Leave a Review&rdquo;).</p>
+			</section>
+
+			<!-- ─── FREE VS PRO ──────────────────────────────────────────────── -->
+
 			<section class="docs-section stack" id="free-vs-pro">
-				<h2>Free vs Pro</h2>
+				<h2>Free vs Pro vs Agency</h2>
 				<table>
 					<thead>
 						<tr>
@@ -114,13 +425,19 @@ get_header();
 							<td>Unlimited</td>
 						</tr>
 						<tr>
-							<td>Team seats</td>
-							<td>1</td>
-							<td>1</td>
-							<td>5</td>
+							<td>Client database</td>
+							<td>&#10003;</td>
+							<td>&#10003;</td>
+							<td>&#10003;</td>
 						</tr>
 						<tr>
-							<td>Client database</td>
+							<td>Proposal templates</td>
+							<td>&#10003;</td>
+							<td>&#10003;</td>
+							<td>&#10003;</td>
+						</tr>
+						<tr>
+							<td>E-signature</td>
 							<td>&#10003;</td>
 							<td>&#10003;</td>
 							<td>&#10003;</td>
@@ -132,13 +449,55 @@ get_header();
 							<td>&#10003;</td>
 						</tr>
 						<tr>
+							<td>Deposit payments</td>
+							<td>&mdash;</td>
+							<td>&#10003;</td>
+							<td>&#10003;</td>
+						</tr>
+						<tr>
+							<td>Analytics</td>
+							<td>&mdash;</td>
+							<td>&#10003;</td>
+							<td>&#10003;</td>
+						</tr>
+						<tr>
+							<td>Webhooks</td>
+							<td>&mdash;</td>
+							<td>&#10003;</td>
+							<td>&#10003;</td>
+						</tr>
+						<tr>
+							<td>Testimonial emails</td>
+							<td>&mdash;</td>
+							<td>&#10003;</td>
+							<td>&#10003;</td>
+						</tr>
+						<tr>
+							<td>AI requests/month</td>
+							<td>&mdash;</td>
+							<td>100</td>
+							<td>500</td>
+						</tr>
+						<tr>
 							<td>Client portal</td>
 							<td>&mdash;</td>
 							<td>View-only</td>
 							<td>Full</td>
 						</tr>
 						<tr>
-							<td>Projects &amp; messaging</td>
+							<td>Projects &amp; milestones</td>
+							<td>&mdash;</td>
+							<td>&mdash;</td>
+							<td>&#10003;</td>
+						</tr>
+						<tr>
+							<td>Approvals</td>
+							<td>&mdash;</td>
+							<td>&mdash;</td>
+							<td>&#10003;</td>
+						</tr>
+						<tr>
+							<td>Client messaging</td>
 							<td>&mdash;</td>
 							<td>&mdash;</td>
 							<td>&#10003;</td>
@@ -147,13 +506,13 @@ get_header();
 							<td>File uploads</td>
 							<td>&mdash;</td>
 							<td>&mdash;</td>
-							<td>1 GB/project</td>
+							<td>1 GB total</td>
 						</tr>
 						<tr>
-							<td>AI requests/month</td>
-							<td>&mdash;</td>
-							<td>100</td>
-							<td>500</td>
+							<td>Team seats</td>
+							<td>1</td>
+							<td>1</td>
+							<td>5</td>
 						</tr>
 					</tbody>
 				</table>

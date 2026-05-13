@@ -43,7 +43,7 @@ global $meta;
 				window.cookiehub.load(cpm);
 			});
 		</script>
-	<?php  } ?>
+	<?php } ?>
 
 	<?php if (isset($meta->noindex) && $meta->noindex) : ?>
 		<meta name="robots" content="noindex">
@@ -114,7 +114,7 @@ $is_single_page = strpos($meta->slug, 'news/') === 0;
 							<li><a class="site-menu__link<?php echo $meta->slug === 'whats-next' ? ' is-active' : ''; ?>" href="/whats-next">What's next</a></li>
 							<li><a class="site-menu__link<?php echo $meta->slug === 'docs' ? ' is-active' : ''; ?>" href="/docs">Docs</a></li>
 							<li><a class="site-menu__link<?php echo $meta->slug === 'changelog' ? ' is-active' : ''; ?>" href="/changelog">Changelog</a></li>
-							<li><a class="button button--nav plan-button" data-plan-id="48155" href="#">Get Pro</a></li>
+							<li><a class="button button--nav" href="/#pricing">Get Started</a></li>
 						</ul>
 					</nav>
 
@@ -140,7 +140,7 @@ $is_single_page = strpos($meta->slug, 'news/') === 0;
 			<li><a class="site-menu__link<?php echo $meta->slug === 'docs' ? ' is-active' : ''; ?>" href="/docs">Docs</a></li>
 			<li><a class="site-menu__link<?php echo $meta->slug === 'changelog' ? ' is-active' : ''; ?>" href="/changelog">Changelog</a></li>
 		</ul>
-		<a class="button button--nav js-get-pro" href="#">Get ClientFlow</a>
+		<a class="button button--nav" href="/#pricing">Get Started</a>
 	</nav>
 
 	<main id="maincontent" class="site-main" role="main">

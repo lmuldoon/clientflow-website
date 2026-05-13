@@ -1,10 +1,5 @@
 import { gsap } from 'gsap';
-import {
-	disableBodyScroll,
-	enableBodyScroll
-} from 'body-scroll-lock';
 
-const targetElement = document.querySelector('#js-site-header');
 let isOpen = false;
 let isAnimating = false;
 
@@ -37,7 +32,7 @@ function openMenu() {
 
 	$hamburger.addClass('is-active').attr('aria-expanded', 'true');
 	$nav.attr('aria-hidden', 'false');
-	disableBodyScroll(targetElement, { reserveScrollBarGap: true });
+	window.ViewportScroll.disable();
 
 	// Make visible before animating
 	gsap.set($nav[0], { visibility: 'visible', pointerEvents: 'auto' });
@@ -77,7 +72,7 @@ function closeMenu() {
 
 	$hamburger.removeClass('is-active').attr('aria-expanded', 'false');
 	$nav.attr('aria-hidden', 'true');
-	enableBodyScroll(targetElement);
+	window.ViewportScroll.enable();
 
 	const tl = gsap.timeline({
 		onComplete: () => {

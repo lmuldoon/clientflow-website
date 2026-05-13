@@ -2,11 +2,12 @@ import {throttle} from "./__event-utilities";
 
 const ANIMATION_DURATION = 200;
 
-let $siteHeader = $('.js-site-header');
+let $siteHeader;
 let isPaused = false;
 let state = 'expanded';
 
 function init() {
+	$siteHeader = $('.js-site-header');
 	updateState();
 	$(window).scroll(throttle(function(event) {
 		updateState();

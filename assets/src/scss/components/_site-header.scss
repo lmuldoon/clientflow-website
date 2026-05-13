@@ -158,7 +158,7 @@
 .site-nav--mobile {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	position: fixed;
 	inset: 0;
 	padding-top: calc(var(--header-height, 68px) + 2rem);

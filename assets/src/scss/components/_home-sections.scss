@@ -166,6 +166,71 @@
 	text-align: center;
 }
 
+// ─── BILLING TOGGLE ───────────────────────────────────────────────────────────
+
+.cf-billing-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+	margin-top: 2rem;
+}
+
+.cf-billing-toggle__label {
+	font-size: var(--size-400);
+	font-weight: 500;
+	color: var(--color-slate-600);
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.cf-billing-toggle__badge {
+	font-size: var(--size-200);
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--color-indigo);
+	background: rgba(99, 102, 241, 0.1);
+	padding: 0.2em 0.6em;
+	border-radius: 99px;
+}
+
+.cf-billing-toggle__switch {
+	position: relative;
+	width: 44px;
+	height: 24px;
+	background: var(--color-grey);
+	border: none;
+	border-radius: 99px;
+	cursor: pointer;
+	padding: 0;
+	transition: background 0.2s ease;
+	flex-shrink: 0;
+
+	&[aria-checked="true"] {
+		background: var(--color-navy);
+	}
+}
+
+.cf-billing-toggle__knob {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 18px;
+	height: 18px;
+	background: var(--color-white);
+	border-radius: 50%;
+	transition: transform 0.2s ease;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+
+	.cf-billing-toggle__switch[aria-checked="true"] & {
+		transform: translateX(20px);
+	}
+}
+
+// ─── PRICING GRID ─────────────────────────────────────────────────────────────
+
 .cf-pricing-grid {
 	display: grid;
 	gap: 1.5rem;
@@ -236,9 +301,16 @@
 	}
 }
 
+.cf-pricing-grid:not(.is-annual) .cf-pricing-tier__year-price {
+	display: none;
+}
+
+.cf-pricing-grid.is-annual .cf-pricing-tier__month-price {
+	display: none;
+}
+
 .cf-pricing-tier__year-price {
-	// font-size: clamp(2.25rem, 4vw, 3.25rem);
-	font-size: var(--size-600);
+	font-size: clamp(2.25rem, 4vw, 3.25rem);
 	font-weight: 700;
 	letter-spacing: -0.03em;
 	color: var(--color-navy);
@@ -248,7 +320,7 @@
 	align-items: baseline;
 	gap:0.1rem;
 	sup {
-		font-size: 0.5em;
+		font-size: 0.6em;
 		font-weight: 600;
 		vertical-align: super;
 		margin-right: 1px;

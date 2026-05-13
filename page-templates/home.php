@@ -294,12 +294,21 @@ get_header();
 			<h2 class="section-heading">Simple pricing that scales with your business</h2>
 			<p class="section-lede">Whether you're sending your first proposal or managing multiple client projects, ClientFlow grows with your workflow.</p>
 
-			<div class="cf-pricing-grid">
+			<div class="cf-billing-toggle">
+					<span class="cf-billing-toggle__label">Monthly</span>
+					<button class="cf-billing-toggle__switch" id="js-billing-toggle" role="switch" aria-checked="false" aria-label="Toggle annual billing">
+						<span class="cf-billing-toggle__knob"></span>
+					</button>
+					<span class="cf-billing-toggle__label">Annually <span class="cf-billing-toggle__badge">Save up to 26%</span></span>
+				</div>
+
+			<div class="cf-pricing-grid" id="js-pricing-grid">
 
 				<!-- FREE -->
 				<div class="cf-pricing-tier">
 					<span class="cf-pricing-tier__name">Free</span>
 					<div class="cf-pricing-tier__month-price"><span><sup>&dollar;</sup>0</span></div>
+					<div class="cf-pricing-tier__year-price"><span><sup>&dollar;</sup>0</span></div>
 					<p class="cf-pricing-tier__note">Forever free</p>
 					<hr class="cf-pricing-divider">
 					<ul class="cf-pricing-features">

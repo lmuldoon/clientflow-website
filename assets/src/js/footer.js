@@ -12,6 +12,8 @@ HeaderStateController.init();
 import { initCheckout } from './scripts/checkout';
 initCheckout();
 
+import './scripts/_class-viewportScroll';
+
 import {
 	MenuController
 } from './scripts/nav-toggle';
