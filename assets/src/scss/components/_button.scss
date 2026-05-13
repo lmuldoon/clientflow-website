@@ -2,7 +2,7 @@
  * Button styles
  */
 
-.button {
+.button,button {
 	@apply font-medium;
 	display: inline-flex;
 	align-items: center;
