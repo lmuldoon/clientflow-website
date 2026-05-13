@@ -154,6 +154,37 @@ $(window).on('scroll', debounce(function () {
 })(jQuery);
 
 
+// ─── DOCS SIDEBAR SCROLL SPY ─────────────────────────────────────────────────
+
+(function ($) {
+	const $navLinks = $('.docs-nav__link');
+	if (!$navLinks.length) return;
+
+	const $sections = $('.docs-section');
+	const $header = $('.site-header');
+
+	function updateDocsNav() {
+		const headerHeight = $header.outerHeight();
+		const scrollPosition = $(window).scrollTop() + headerHeight + 32;
+		let currentSection = null;
+
+		$sections.each(function () {
+			if ($(this).offset().top <= scrollPosition) {
+				currentSection = $(this);
+			}
+		});
+
+		if (!currentSection) return;
+
+		const sectionId = currentSection.attr('id');
+		$navLinks.removeClass('is-active');
+		$('.docs-nav__link[href="#' + sectionId + '"]').addClass('is-active');
+	}
+
+	$(window).on('load scroll', updateDocsNav);
+})(jQuery);
+
+
 // ─── ACTIVE NAV TRACKING ─────────────────────────────────────────────────────
 
 (function ($) {

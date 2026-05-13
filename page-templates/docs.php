@@ -29,7 +29,7 @@ get_header();
 		<!-- Sidebar Nav -->
 		<nav class="docs-sidebar animated-up" aria-label="Documentation navigation">
 			<ul class="docs-nav">
-				<li><a href="#getting-started" class="docs-nav__link is-active">Getting Started</a></li>
+				<li><a href="#getting-started" class="docs-nav__link">Getting Started</a></li>
 				<li><a href="#requirements" class="docs-nav__link">Requirements</a></li>
 				<li><a href="#installation" class="docs-nav__link">Installation</a></li>
 				<li><a href="#quick-start" class="docs-nav__link">Quick Start</a></li>
