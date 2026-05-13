@@ -299,8 +299,9 @@ get_header();
 					<button class="cf-billing-toggle__switch" id="js-billing-toggle" role="switch" aria-checked="false" aria-label="Toggle annual billing">
 						<span class="cf-billing-toggle__knob"></span>
 					</button>
-					<span class="cf-billing-toggle__label">Annually <span class="cf-billing-toggle__badge">Save up to 26%</span></span>
+					<span class="cf-billing-toggle__label">Annually</span>
 				</div>
+				<p class="cf-billing-toggle__save">Pay annually and save up to 26%</p>
 
 			<div class="cf-pricing-grid" id="js-pricing-grid">
 

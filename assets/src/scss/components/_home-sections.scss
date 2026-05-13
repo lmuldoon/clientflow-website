@@ -185,15 +185,12 @@
 	gap: 0.5rem;
 }
 
-.cf-billing-toggle__badge {
-	font-size: var(--size-200);
-	font-weight: 700;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
+.cf-billing-toggle__save {
+	font-size: var(--size-300);
+	font-weight: 600;
 	color: var(--color-indigo);
-	background: rgba(99, 102, 241, 0.1);
-	padding: 0.2em 0.6em;
-	border-radius: 99px;
+	margin-top: 0.6rem;
+	margin-bottom: 0;
 }
 
 .cf-billing-toggle__switch {
