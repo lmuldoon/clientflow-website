@@ -13,6 +13,5 @@ node_modules
 
 # Ignore server side files
 robots.txt
-sitemap.xml
 documents
 clientflow
