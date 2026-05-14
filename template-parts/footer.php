@@ -36,6 +36,7 @@ global $meta;
 					<ul>
 						<li><a href="/docs">Documentation</a></li>
 						<li><a href="/#faq">FAQ</a></li>
+						<li><a href="https://customers.freemius.com/store/13667" target="_blank" rel="noopener">Manage licence</a></li>
 					</ul>
 				</div>
 
