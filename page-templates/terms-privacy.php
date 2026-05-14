@@ -41,7 +41,7 @@ get_header();
 				<p>ClientFlow is provided "as is", without warranty of any kind. We are not liable for any direct, indirect, incidental or consequential damages arising from your use of the plugin, including but not limited to email delivery failures, data loss or API service interruptions from third-party platforms.</p>
 
 				<h3>Third-party services</h3>
-				<p>ClientFlow integrates with third-party email platforms (Mailchimp, Brevo, Klaviyo, Campaign Monitor, ActiveCampaign, HubSpot). Use of these services is subject to their own terms and privacy policies. ClientFlow passes your API credentials and template HTML to these services as required to perform the integration. We do not store or transmit your API credentials outside your WordPress installation.</p>
+				<p>ClientFlow integrates with <strong>Stripe</strong> for payment processing. Use of Stripe is subject to the <a href="https://stripe.com/gb/legal/ssa" target="_blank" rel="noopener">Stripe Services Agreement</a> and <a href="https://stripe.com/gb/privacy" target="_blank" rel="noopener">Stripe Privacy Policy</a>. ClientFlow passes payment data directly to Stripe via their API and does not store card details within your WordPress installation.</p>
 
 				<hr>
 
@@ -64,14 +64,12 @@ get_header();
 				<h3>The ClientFlow plugin</h3>
 				<p>The ClientFlow plugin itself does not collect, transmit or store any personal data from your website visitors. It operates entirely within your WordPress installation.</p>
 
-				<h4>Data sent to third-party email platforms</h4>
-				<p>When you use the direct platform push feature (Pro), ClientFlow sends your email template HTML to the selected platform's API. No visitor or subscriber data is transmitted — only the template structure and content you have built.</p>
 
 				<h4>Freemius licensing</h4>
 				<p>ClientFlow uses <a href="https://freemius.com" target="_blank" rel="noopener">Freemius</a> for licence management. Freemius may collect diagnostic and usage data from your WordPress installation as part of the licence activation process. You can opt out during activation. Please refer to the <a href="https://freemius.com/privacy/" target="_blank" rel="noopener">Freemius Privacy Policy</a> for full details of what data is collected and how it is used.</p>
 
 				<h3>Contact</h3>
-				<p>If you have questions about this policy or wish to request deletion of any data we hold, please contact us via the support link in the WordPress plugin directory listing.</p>
+				<p>If you have questions about this policy or wish to request deletion of any data we hold, please contact us at <a href="mailto:info@wpclientflow.co.uk">info@wpclientflow.co.uk</a>.</p>
 
 			</div>
 		</div>
