@@ -19,8 +19,8 @@ global $meta;
 	$re = "/^(?:www\.)?" . str_replace('.', "\.", $DOMAIN) . "$/"; // escape dots
 	$IS_LIVE = preg_match($re, $_SERVER['SERVER_NAME']);
 	?>
-	<?php //if ($IS_LIVE) { ?>
-		<!-- <script src="https://checkout.freemius.com/js/v1/" async></script> -->
+	<?php if ($IS_LIVE) { ?>
+		<script src="https://checkout.freemius.com/js/v1/" async></script>
 		<script src="https://cdn.cookiehub.eu/c2/aac6b6f4.js"></script>
 		<script type="text/javascript">
 			window.dataLayer = window.dataLayer || [];
@@ -43,7 +43,7 @@ global $meta;
 				window.cookiehub.load(cpm);
 			});
 		</script>
-	<?php //} ?>
+	<?php } ?>
 
 	<?php if (isset($meta->noindex) && $meta->noindex) : ?>
 		<meta name="robots" content="noindex">

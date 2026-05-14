@@ -82,7 +82,7 @@ get_header();
 
 				<h3>From a ZIP file (Pro / Agency)</h3>
 				<ol>
-					<li>Download the plugin ZIP from your Freemius licence dashboard.</li>
+					<li>Download the plugin ZIP from your purchase confirmation email.</li>
 					<li>In your WordPress admin, go to <strong>Plugins &rarr; Add New &rarr; Upload Plugin</strong>.</li>
 					<li>Select the ZIP file and click <strong>Install Now</strong>, then <strong>Activate</strong>.</li>
 					<li>On first activation you will be prompted to enter your licence key. Paste the key from your licence dashboard and click <strong>Activate Licence</strong>.</li>
@@ -202,14 +202,18 @@ get_header();
 				</ol>
 
 				<h3>Setting up the webhook</h3>
-				<p>ClientFlow needs Stripe to notify it when a payment completes. To configure this:</p>
 				<ol>
-					<li>In your Stripe dashboard, go to <strong>Developers &rarr; Webhooks &rarr; Add endpoint</strong>.</li>
-					<li>Copy the <strong>Webhook Endpoint URL</strong> from <strong>ClientFlow &rarr; Settings</strong> (it looks like <code>https://yoursite.com/wp-json/clientflow/v1/payments/webhook</code>).</li>
-					<li>Paste it into Stripe and select the <code>checkout.session.completed</code> event.</li>
-					<li>After saving, copy the <strong>Signing secret</strong> (<code>whsec_&hellip;</code>) from Stripe and paste it into the Stripe Webhook Signing Secret field in ClientFlow Settings.</li>
+					<li>In your Stripe Dashboard, go to <strong>Developers → Workbench → Webhooks</strong> and click <strong>Add destination</strong>.</li>
+					<li>Select <strong>Webhook endpoint</strong> as the destination type.</li>
+					<li>Copy the <strong>Webhook Endpoint URL</strong> from <strong>ClientFlow → Settings</strong> and paste it into the Endpoint URL field.</li>
+					<li>Under events, select: <code>checkout.session.completed</code>, <code>checkout.session.expired</code>, <code>checkout.session.async_payment_succeeded</code>, and <code>checkout.session.async_payment_failed</code>.</li>
+					<li>Save the endpoint, then click into it to reveal the <strong>Signing secret</strong> (<code>whsec_…</code>).</li>
+					<li>Paste that secret into the <strong>Stripe Webhook Signing Secret</strong> field in <strong>ClientFlow → Settings</strong>.</li>
 				</ol>
+				<p>The key changes: "Workbench → Webhooks → Add destination" replaces the old "Webhooks → Add endpoint" path, and the two async payment events are added alongside checkout.session.completed (needed for bank transfers and other delayed payment methods).</p>
 
+				<p><strong>Testing with sandbox mode:</strong> Use your <code>pk_test_…</code> / <code>sk_test_…</code> keys and create a separate webhook endpoint in Stripe pointing to your staging/test site. Test card number <code>4242 4242 4242 4242</code> (any future expiry, any CVC) triggers a successful payment.</p>
+				
 				<h3>Deposit payments</h3>
 				<p>On any proposal, enable payment and set a <strong>deposit percentage</strong> (1–100%). The client pays the deposit when they accept. You can mark the balance as due on project completion, which triggers a second Stripe checkout session.</p>
 
@@ -475,7 +479,7 @@ get_header();
 						<tr>
 							<td>Client portal</td>
 							<td>&mdash;</td>
-							<td>View-only</td>
+							<td>Basic</td>
 							<td>Full</td>
 						</tr>
 						<tr>

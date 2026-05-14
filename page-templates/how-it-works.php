@@ -29,7 +29,7 @@ get_header();
 				<p class="hero__lede text-white">ClientFlow connects proposals, payments, projects, client communication, and delivery into one seamless system inside WordPress.</p>
 
 				<div class="hero__actions">
-					<a class="button button--primary" href="#">Get ClientFlow free</a>
+					<a class="button button--primary plan-button" data-plan-id="48154" href="#">Get ClientFlow free</a>
 				</div>
 
 			</div>
@@ -268,7 +268,7 @@ get_header();
 			<p>Join freelancers and agencies using ClientFlow to manage proposals, payments, projects, and delivery from one connected platform.</p>
 
 			<div class="cta-strip__actions">
-				<a class="button button--primary js-get-pro" href="#">Get ClientFlow free</a>
+				<a class="button button--primary plan-button" data-plan-id="48154" href="#">Get ClientFlow free</a>
 				<a class="button button--ghost" href="/#pricing">See pricing</a>
 			</div>
 

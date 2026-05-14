@@ -29,7 +29,7 @@ get_header();
 				<p class="hero__lede">Create proposals, get paid, and manage your clients in one simple system &mdash; all inside the WordPress site you already own.</p>
 
 				<div class="hero__actions">
-					<a class="button button--primary" href="#">Get ClientFlow free</a>
+					<a class="button button--primary plan-button" data-plan-id="48154" href="#">Get ClientFlow free</a>
 					<a class="button button--ghost" href="#how-it-works">See how it works</a>
 				</div>
 
@@ -332,7 +332,7 @@ get_header();
 						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Collect client feedback and revisions</li>
 						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Automated status notification emails</li>
 					</ul>
-					<a class="button button--ghost" style="width:100%; justify-content:center;" href="#">Download free</a>
+					<a class="button button--ghost plan-button" data-plan-id="48154" style="width:100%; justify-content:center;" href="#">Download free</a>
 				</div>
 
 				<!-- PRO -->
@@ -500,7 +500,7 @@ get_header();
 			<p>Get ClientFlow free and see how much simpler it can be to run client work from inside WordPress.</p>
 
 			<div class="cta-strip__actions">
-				<a class="button button--primary plan-button" href="#">Get ClientFlow free</a>
+				<a class="button button--primary plan-button" data-plan-id="48154" href="#">Get ClientFlow free</a>
 				<a class="button button--ghost" href="#pricing">See pricing</a>
 			</div>
 
