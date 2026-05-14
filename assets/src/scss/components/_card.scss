@@ -55,8 +55,8 @@
 
 	li {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		gap: 0.65rem;
 		padding: 0.6rem 0 !important;
 		margin: 0 !important;
 		border-bottom: 1px solid var(--color-grey);
@@ -78,4 +78,11 @@
 			text-decoration: line-through;
 		}
 	}
+}
+
+.card-list__icon {
+	flex-shrink: 0;
+
+	&--no  { color: #ef4444; }
+	&--yes { color: #10B981; }
 }

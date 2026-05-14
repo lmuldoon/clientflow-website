@@ -65,23 +65,23 @@ get_header();
 				<div class="card card--before">
 					<span class="card__title">Before ClientFlow</span>
 					<ul class="card-list">
-						<li><span>PDF's proposals</span></li>
-						<li><span>Payment links</span></li>
-						<li><span>Endless email threads</span></li>
-						<li><span>"Did you receive the invoice?"</span></li>
-						<li><span>Scattered client files</span></li>
+						<li><iconify-icon class="card-list__icon card-list__icon--no" icon="lucide:x" width="14" height="14"></iconify-icon><span>PDF proposals</span></li>
+						<li><iconify-icon class="card-list__icon card-list__icon--no" icon="lucide:x" width="14" height="14"></iconify-icon><span>Payment links</span></li>
+						<li><iconify-icon class="card-list__icon card-list__icon--no" icon="lucide:x" width="14" height="14"></iconify-icon><span>Endless email threads</span></li>
+						<li><iconify-icon class="card-list__icon card-list__icon--no" icon="lucide:x" width="14" height="14"></iconify-icon><span>"Did you receive the invoice?"</span></li>
+						<li><iconify-icon class="card-list__icon card-list__icon--no" icon="lucide:x" width="14" height="14"></iconify-icon><span>Scattered client files</span></li>
 					</ul>
 				</div>
 
 				<div class="card card--after">
 					<span class="card__title card__title--after">After ClientFlow</span>
 					<ul class="card-list">
-						<li><span>One proposal flow</span></li>
-						<li><span>Instant payments</span></li>
-						<li><span>Client portal</span></li>
-						<li><span>Project tracking</span></li>
-						<li><span>Automatic notifications</span></li>
-						<li><span>Approvals + delivery</span></li>
+						<li><iconify-icon class="card-list__icon card-list__icon--yes" icon="lucide:check" width="14" height="14"></iconify-icon><span>One proposal flow</span></li>
+						<li><iconify-icon class="card-list__icon card-list__icon--yes" icon="lucide:check" width="14" height="14"></iconify-icon><span>Instant payments</span></li>
+						<li><iconify-icon class="card-list__icon card-list__icon--yes" icon="lucide:check" width="14" height="14"></iconify-icon><span>Client portal</span></li>
+						<li><iconify-icon class="card-list__icon card-list__icon--yes" icon="lucide:check" width="14" height="14"></iconify-icon><span>Project tracking</span></li>
+						<li><iconify-icon class="card-list__icon card-list__icon--yes" icon="lucide:check" width="14" height="14"></iconify-icon><span>Automatic notifications</span></li>
+						<li><iconify-icon class="card-list__icon card-list__icon--yes" icon="lucide:check" width="14" height="14"></iconify-icon><span>Approvals + delivery</span></li>
 					</ul>
 				</div>
 
@@ -96,7 +96,7 @@ get_header();
      PIPELINE — Interactive stepper
 ════════════════════════════════════════════════════════════════════════════════ -->
 
-	<section class="section section--pipeline menu-section bg-lightemerald" id="how-it-works">
+	<section class="section section--pipeline menu-section bg-lightemerald">
 		<div class="container animated-up">
 
 			<p class="section-eyebrow">How it works</p>
@@ -131,7 +131,7 @@ get_header();
 				<div class="pipeline-panel is-active">
 
 					<div class="pipeline-panel__content">
-						<h3 class="pipeline-panel__headline" id="js-pipeline-headline">Proposals that close themselves</h3>
+						<h3 class="pipeline-panel__headline">Proposals that close themselves</h3>
 						<p class="pipeline-panel__desc">
 							Create professional proposals in minutes, send them with one click, and let clients review and accept instantly — no PDFs, no back-and-forth.
 						</p>
@@ -143,7 +143,7 @@ get_header();
 						</ul>
 					</div>
 
-					<div class="pipeline-screenshot" id="js-pipeline-screenshot" aria-hidden="true">
+					<div class="pipeline-screenshot" aria-hidden="true">
 						<img src="/static/images/screenshots/proposal-template-wizard.jpg?v=1" alt="ClientFlow proposal builder" width="1675" height="1712" />
 					</div>
 
@@ -152,7 +152,7 @@ get_header();
 				<div class="pipeline-panel">
 
 					<div class="pipeline-panel__content">
-						<h3 class="pipeline-panel__headline" id="js-pipeline-headline">Get paid without friction</h3>
+						<h3 class="pipeline-panel__headline">Get paid without friction</h3>
 						<p class="pipeline-panel__desc">
 							Turn accepted proposals into payments instantly with built-in Stripe integration, including deposits and remaining balances — all tracked automatically.
 						</p>
@@ -164,7 +164,7 @@ get_header();
 						</ul>
 					</div>
 
-					<div class="pipeline-screenshot" id="js-pipeline-screenshot" aria-hidden="true">
+					<div class="pipeline-screenshot" aria-hidden="true">
 						<img src="/static/images/screenshots/admin-payment-notification.png?v=1" alt="ClientFlow payment notification email" width="1140" height="1092" />
 					</div>
 
@@ -173,7 +173,7 @@ get_header();
 				<div class="pipeline-panel">
 
 					<div class="pipeline-panel__content">
-						<h3 class="pipeline-panel__headline" id="js-pipeline-headline">Keep every project organised</h3>
+						<h3 class="pipeline-panel__headline">Keep every project organised</h3>
 						<p class="pipeline-panel__desc">
 							As soon as a proposal is accepted, a project is created automatically — keeping all client activity, messages, and progress organised in one place.
 						</p>
@@ -185,7 +185,7 @@ get_header();
 						</ul>
 					</div>
 
-					<div class="pipeline-screenshot" id="js-pipeline-screenshot" aria-hidden="true">
+					<div class="pipeline-screenshot" aria-hidden="true">
 						<img src="/static/images/screenshots/admin-project-2.jpg?v=1" alt="ClientFlow admin project interface" width="1920" height="1441" />
 					</div>
 
@@ -194,7 +194,7 @@ get_header();
 				<div class="pipeline-panel">
 
 					<div class="pipeline-panel__content">
-						<h3 class="pipeline-panel__headline" id="js-pipeline-headline">Deliver work in one place</h3>
+						<h3 class="pipeline-panel__headline">Deliver work in one place</h3>
 						<p class="pipeline-panel__desc">
 							Collaborate with clients through a dedicated portal where you can share files, request approvals, and keep everything aligned until the work is complete.
 						</p>
@@ -206,8 +206,8 @@ get_header();
 						</ul>
 					</div>
 
-					<div class="pipeline-screenshot" id="js-pipeline-screenshot" aria-hidden="true">
-						<img src="/static/images/screenshots/client-dashboard.jpg?v=1" alt="ClientFlow client dashboard" width="1920" height="1434ç" />
+					<div class="pipeline-screenshot" aria-hidden="true">
+						<img src="/static/images/screenshots/client-dashboard.jpg?v=1" alt="ClientFlow client dashboard" width="1920" height="1434" />
 					</div>
 
 				</div>
@@ -242,37 +242,49 @@ get_header();
 			<div class="cf-features-grid">
 
 				<div class="feature-cell">
-					<span class="feature-cell__label">01</span>
+					<div class="feature-cell__icon">
+						<iconify-icon icon="lucide:file-text" width="22" height="22"></iconify-icon>
+					</div>
 					<h3>From proposal to payment</h3>
 					<p>Create proposals, collect deposits, request final balances, and track payments without switching between multiple tools.</p>
 				</div>
 
 				<div class="feature-cell">
-					<span class="feature-cell__label">02</span>
+					<div class="feature-cell__icon">
+						<iconify-icon icon="lucide:layout-dashboard" width="22" height="22"></iconify-icon>
+					</div>
 					<h3>A professional client experience</h3>
 					<p>Give clients a branded portal where they can review proposals, pay invoices, approve work, download files, and track progress.</p>
 				</div>
 
 				<div class="feature-cell">
-					<span class="feature-cell__label">03</span>
+					<div class="feature-cell__icon">
+						<iconify-icon icon="lucide:users" width="22" height="22"></iconify-icon>
+					</div>
 					<h3>Built for freelancers & agencies</h3>
 					<p>Designed specifically for client-based businesses managing proposals, projects, payments, and ongoing communication.</p>
 				</div>
 
 				<div class="feature-cell">
-					<span class="feature-cell__label">04</span>
+					<div class="feature-cell__icon">
+						<iconify-icon icon="lucide:shield-check" width="22" height="22"></iconify-icon>
+					</div>
 					<h3>Everything stays inside WordPress</h3>
 					<p>Your proposals, projects, files, and client data stay on infrastructure you already own and control.</p>
 				</div>
 
 				<div class="feature-cell">
-					<span class="feature-cell__label">05</span>
+					<div class="feature-cell__icon">
+						<iconify-icon icon="lucide:zap" width="22" height="22"></iconify-icon>
+					</div>
 					<h3>Automate repetitive admin work</h3>
 					<p>Trigger emails, payment requests, project creation, and external workflows automatically with built-in automation and webhooks.</p>
 				</div>
 
 				<div class="feature-cell">
-					<span class="feature-cell__label">06</span>
+					<div class="feature-cell__icon">
+						<iconify-icon icon="lucide:sparkles" width="22" height="22"></iconify-icon>
+					</div>
 					<h3>AI-assisted proposal writing</h3>
 					<p>Generate proposal sections, improve wording, and create persuasive client-ready copy in seconds using built-in AI tools.</p>
 				</div>
@@ -313,12 +325,12 @@ get_header();
 					<p class="cf-pricing-tier__note">Forever free</p>
 					<hr class="cf-pricing-divider">
 					<ul class="cf-pricing-features">
-						<li><span class="cf-check">&#10003;</span> 3 proposals per month</li>
-						<li><span class="cf-check">&#10003;</span> Proposal builder</li>
-						<li><span class="cf-check">&#10003;</span> 1 team seat</li>
-						<li><span class="cf-check">&#10003;</span> Track viewed, accepted, and declined proposals</li>
-						<li><span class="cf-check">&#10003;</span> Collect client feedback and revisions</li>
-						<li><span class="cf-check">&#10003;</span> Automated status notification emails</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> 3 proposals per month</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Proposal builder</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> 1 team seat</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Track viewed, accepted, and declined proposals</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Collect client feedback and revisions</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Automated status notification emails</li>
 					</ul>
 					<a class="button button--ghost" style="width:100%; justify-content:center;" href="#">Download free</a>
 				</div>
@@ -328,21 +340,21 @@ get_header();
 					<span class="cf-pricing-tier__pill">Most popular</span>
 					<span class="cf-pricing-tier__name">Pro</span>
 					<div class="cf-pricing-tier__month-price"><span><sup>&dollar;</sup>9.99</span><span class="cf-pricing-tier__period">/ month</span></div>
-					<div class="cf-pricing-tier__year-price"><span><sup>&dollar;</sup>89</span><span class="cf-pricing-tier__period">/ year</span></div>
+					<div class="cf-pricing-tier__year-price"><span><sup>&dollar;</sup>89</span><span class="cf-pricing-tier__period">/ year</span><span class="cf-save-badge">Save 26%</span></div>
 					<hr class="cf-pricing-divider">
 					<ul class="cf-pricing-features">
-						<li><span class="cf-check">&#10003;</span> Unlimited proposals</li>
-						<li><span class="cf-check">&#10003;</span> Proposal builder</li>
-						<li><span class="cf-check">&#10003;</span> 1 team seat</li>
-						<li><span class="cf-check">&#10003;</span> Track viewed, accepted, and declined proposals</li>
-						<li><span class="cf-check">&#10003;</span> Collect client feedback and revisions</li>
-						<li><span class="cf-check">&#10003;</span> Automated status notification emails</li>
-						<li><span class="cf-check">&#10003;</span> Client portal</li>
-						<li><span class="cf-check">&#10003;</span> Stripe payments</li>
-						<li><span class="cf-check">&#10003;</span> Analytics</li>
-						<li><span class="cf-check">&#10003;</span> Automated testimonial request</li>
-						<li><span class="cf-check">&#10003;</span> 100 AI requests/month</li>
-						<li><span class="cf-check">&#10003;</span> Email support</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Unlimited proposals</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Proposal builder</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> 1 team seat</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Track viewed, accepted, and declined proposals</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Collect client feedback and revisions</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Automated status notification emails</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Client portal</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Stripe payments</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Analytics</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Automated testimonial request</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> 100 AI requests/month</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Email support</li>
 					</ul>
 					<a class="button button--primary plan-button" data-plan-id="48155" style="width:100%; justify-content:center;" href="#">Get Pro</a>
 				</div>
@@ -351,25 +363,25 @@ get_header();
 				<div class="cf-pricing-tier">
 					<span class="cf-pricing-tier__name">Agency</span>
 					<div class="cf-pricing-tier__month-price"><span><sup>&dollar;</sup>24.99</span><span class="cf-pricing-tier__period">/ month</span></div>
-					<div class="cf-pricing-tier__year-price"><span><sup>&dollar;</sup>229</span><span class="cf-pricing-tier__period">/ year</span></div>
+					<div class="cf-pricing-tier__year-price"><span><sup>&dollar;</sup>229</span><span class="cf-pricing-tier__period">/ year</span><span class="cf-save-badge">Save 24%</span></div>
 					<hr class="cf-pricing-divider">
 					<ul class="cf-pricing-features">
-						<li><span class="cf-check">&#10003;</span> Unlimited proposals</li>
-						<li><span class="cf-check">&#10003;</span> Proposal builder</li>
-						<li><span class="cf-check">&#10003;</span> 5 team seats</li>
-						<li><span class="cf-check">&#10003;</span> Track viewed, accepted, and declined proposals</li>
-						<li><span class="cf-check">&#10003;</span> Collect client feedback and revisions</li>
-						<li><span class="cf-check">&#10003;</span> Automated status notification emails</li>
-						<li><span class="cf-check">&#10003;</span> Client portal</li>
-						<li><span class="cf-check">&#10003;</span> Stripe payments</li>
-						<li><span class="cf-check">&#10003;</span> Analytics</li>
-						<li><span class="cf-check">&#10003;</span> Automated testimonial request</li>
-						<li><span class="cf-check">&#10003;</span> 500 AI requests/month</li>
-						<li><span class="cf-check">&#10003;</span> Priority email support</li>
-						<li><span class="cf-check">&#10003;</span> Project & milestone management</li>
-						<li><span class="cf-check">&#10003;</span> Approval workflows</li>
-						<li><span class="cf-check">&#10003;</span> Client messaging</li>
-						<li><span class="cf-check">&#10003;</span> File uploads</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Unlimited proposals</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Proposal builder</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> 5 team seats</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Track viewed, accepted, and declined proposals</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Collect client feedback and revisions</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Automated status notification emails</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Client portal</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Stripe payments</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Analytics</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Automated testimonial request</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> 500 AI requests/month</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Priority email support</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Project & milestone management</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Approval workflows</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> Client messaging</li>
+						<li><span class="cf-check"><iconify-icon icon="lucide:check" width="12" height="12"></iconify-icon></span> File uploads</li>
 					</ul>
 					<a class="button button--ghost plan-button" data-plan-id="48156" style="width:100%; justify-content:center;" href="#">Get Agency</a>
 				</div>
@@ -392,6 +404,7 @@ get_header();
 
 			<div class="faq-layout">
 			<div class="accordions-wrapper">
+
 
 				<div class="accordion">
 					<div class="js-accordion-trigger">
@@ -465,6 +478,10 @@ get_header();
 					</div>
 				</div>
 
+			</div>
+
+			<div class="faq-contact">
+				<p>Still have a question? <a href="mailto:info@wpclientflow.co.uk?subject=Website%20Inquiry">Drop us a message →</a></p>
 			</div>
 		</div>
 
