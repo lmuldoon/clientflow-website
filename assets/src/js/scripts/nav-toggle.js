@@ -17,8 +17,29 @@ function init() {
 	});
 
 	// Close when any mobile nav link is clicked (delegated so GSAP pointer-events state doesn't interfere)
-	$(document).on('click', '#js-mobile-nav a', function () {
-		if (isOpen) closeMenu();
+	$(document).on('click', '#js-mobile-nav a', function (e) {
+		if (!isOpen) return;
+
+		const href = this.getAttribute('href');
+		const isAnchor = href && href.startsWith('#') && href.length > 1;
+
+		if (isAnchor) {
+			// Prevent the smooth scroll handler from running — we handle scrolling ourselves
+			// after ViewportScroll.enable() has restored the body position.
+			e.preventDefault();
+			closeMenu();
+
+			const target = document.querySelector(href);
+			if (target) {
+				requestAnimationFrame(() => {
+					const headerHeight = document.querySelector('.site-header').offsetHeight;
+					const top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+					window.scrollTo({ top, behavior: 'smooth' });
+				});
+			}
+		} else {
+			closeMenu();
+		}
 	});
 }
 
