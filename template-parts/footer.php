@@ -44,7 +44,7 @@ global $meta;
 					<span class="site-footer__col-title">Company</span>
 					<ul>
 						<li><a href="/terms-privacy">Terms &amp; Privacy</a></li>
-						<li><a href="https://wordpress.org/plugins/clientflow/" target="_blank" rel="noopener">WordPress.org</a></li>
+						<!-- <li><a href="https://wordpress.org/plugins/clientflow/" target="_blank" rel="noopener">WordPress.org</a></li> -->
 					</ul>
 				</div>
 
