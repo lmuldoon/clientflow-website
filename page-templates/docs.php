@@ -66,6 +66,14 @@ get_header();
 					<li>A Stripe account (Pro and Agency only — required for payment collection)</li>
 				</ul>
 				<p>ClientFlow is single-site only. Multisite networks are not supported.</p>
+
+				<h3>Email deliverability</h3>
+				<p>ClientFlow sends transactional emails (proposal delivery, portal invites, payment confirmations, testimonial requests) via WordPress's built-in <code>wp_mail()</code>. Without an SMTP plugin, emails may be marked as spam or fail to deliver entirely depending on your hosting environment.</p>
+				<p>For reliable delivery, install an SMTP plugin and connect it to a transactional email provider:</p>
+				<ul>
+					<li><strong>SMTP plugins:</strong> WP Mail SMTP, FluentSMTP, GoSMTP</li>
+					<li><strong>Transactional providers:</strong> Mailgun, Postmark, SendGrid</li>
+				</ul>
 			</section>
 
 			<!-- ─── INSTALLATION ────────────────────────────────────────────── -->
